@@ -22,8 +22,140 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
 
-</body>
+  <link href="../bootstrap-datetimepicker.css" rel="stylesheet">
+  <script src="../moment-with-locales.js"></script>
+  <script src="../bootstrap-datetimepicker.js"></script>
+
+
+</head>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+            <i class="fa fa-calculator"></i>
+            Omnicalc
+        </a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav visible-xs visible-sm">
+           <li>
+              <a href="../word_count/new.html">
+                <i class="fa fa-book"></i>
+                <span>Word Count</span>
+                </a>
+              </li>
+            <li>
+              <a href="../loan_payment/new.html">
+                <i class="fa fa-money"></i>
+                <span>Loan Payment</span>
+                </a>
+              </li>
+            <li>
+              <a href="../time_between/new.html">
+                <i class="fa fa-clock-o"></i>
+                <span>Time Between</span>
+                </a>
+              </li>
+            <li>
+              <a href="../descriptive_statistics/new.html">
+                <i class="fa fa-bar-chart"></i>
+                <span>Descriptive Statistics</span>
+                </a>
+              </li>
+          </ul>
+    </nav>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 hidden-xs hidden-sm">
+          <div class="list-group">
+            <a href="../word_count/new.html" class="list-group-item">
+              <i class="fa fa-book"></i>
+              <span>Word Count</span>
+              </a>
+            <a href="../loan_payment/new.html" class="list-group-item">
+              <i class="fa fa-money"></i>
+              <span>Loan Payment</span>
+              </a>
+             <a href="../time_between/new.html" class="list-group-item">
+              <i class="fa fa-clock-o"></i>
+              <span>Time Between</span>
+              </a>
+             <a href="../descriptive_statistics/new.html" class="list-group-item">
+              <i class="fa fa-bar-chart"></i>
+              <span>Descriptive Statistics</span>
+              </a>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">New Time Between Calculation</h3>
+              </div>
+            <div class="panel-body">
+            <!--
+              *
+              *
+              Content for panel gets inserted here
+              *
+              *
+            -->
+            <form action="../time_between/results.html" class="form-horizontal" role="form">
+                 <div class="form-group">
+                    <label class="control-label col-md-2" for="start_time">Start Time</label>
+                    <div class="col-md-10">
+                      <div class='input-group date' id='start_time'>
+                        <input type='text' class="form-control" />
+                          <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                          </span>
+                        </div>
+                      </div>
+                      <script type="text/javascript">
+                          $(function () {
+                              $('#start_time').datetimepicker();
+                          });
+                      </script>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label col-md-2" for="end_time">Ending Time</label>
+                    <div class="col-md-10">
+                      <div class='input-group date' id='end_time'>
+                        <input type='text' class="form-control" />
+                          <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                          </span>
+                        </div>
+                      </div>
+                      <script type="text/javascript">
+                          $(function () {
+                              $('#end_time').datetimepicker();
+                          });
+                      </script>
+                  </div>
+
+
+              <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                  <button type="submit" class="btn btn-default btn-primary btn-block">Submit</button>
+                </div>
+              </div>
+            </form>
+
+              </div>
+          </div>
+        </div>
+      </div>
+      </div>
+  </body>
 </html>
